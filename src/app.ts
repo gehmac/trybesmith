@@ -1,9 +1,10 @@
-import express from 'express';
+import express, { Express } from 'express';
 import ProductController from './controllers/products.constroller';
+import middlewares from './middlewares';
 
 const productController = new ProductController();
 
-const app = express();
+const app: Express = express();
 app.use(express.json());
 
 app
@@ -13,5 +14,7 @@ app
 app
   .route('/products')
   .get(productController.getAll);
+
+app.use(middlewares.handleError);
 
 export default app;
