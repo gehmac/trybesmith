@@ -13,7 +13,8 @@ app
 
 app
   .route('/products')
-  .get(productController.getAll);
+  .get(productController.getAll)
+  .post(productController.create);
 
 app.use(middlewares.handleError);
 
