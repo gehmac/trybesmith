@@ -4,3 +4,9 @@ export interface Product {
   amount: string,
   orderId?: number | null,
 }
+export interface User {
+  username: string,
+  classe: string,
+  level: number,
+  password: string,
+}
