@@ -1,8 +1,6 @@
 import { Request, Response } from 'express';
 import UserService from '../services/users.services';
 import validateUsers from '../schemas/validateUsers';
-// import middlewares from './middlewares';
-// import validateProducts from '../schemas/validateProducts';
 
 export default class ProductController {
   constructor(private productService = new UserService()) {}
